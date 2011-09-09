@@ -14,17 +14,17 @@ using namespace std;
 
 int main()
 {
-	int i, j = 0;		// loop counters
+	int i, j = 0;					// loop counters
 	
-	string containerOrder;	// order of containers as collected from input
+	string containerOrder;			// order of containers as collected from input
 	
-	int containers;			// number of containers
+	int containers;					// number of containers
 	int stacksUsed = 0;
-	int placed = 1;			// 0 = placed, 1 = not placed
+	int placed = 1;					// 0 = placed, 1 = not placed
 	
 	char container;
 
-	stack<char> stacks[1000];			// an array of 1000 stacks
+	stack<char> stacks[1000];		// an array of 1000 stacks
 	
 	cin >> containerOrder;					
 	
@@ -32,15 +32,14 @@ int main()
 	
 	// for each container
 	for (i = 0; i < containers; i++)
-	{
-		
+	{		
 		placed = 1;		
-		
+			
 		container = containerOrder[i];		
 		
+		// iterate for each container till it's placed		
 		while (placed == 1)
-		{
-			cout << "HERE " <<  endl;
+		{			
 
 			// check if current stack is occupied
 			if (stacks[j].size() > 0)
@@ -67,6 +66,7 @@ int main()
 		
 	}
 	
+	// count stacks used
 	for (i = 0; i < 1000; i++)
 	{
 		if (stacks[i].size() > 0)
