@@ -17,6 +17,7 @@ int main()
 	int i, j = 0;					// loop counters
 	
 	string containerOrder;			// order of containers as collected from input
+	string::iterator it(,char);
 	
 	int containers;					// number of containers
 	int stacksUsed = 0;
@@ -31,7 +32,7 @@ int main()
 	containers = containerOrder.size(); 		
 	
 	// for each container
-	for (i = 0; i < containers; i++)
+	for (it=containerOrder.begin(); it < containerOrder.end(); it++)
 	{		
 		placed = 1;		
 			
@@ -44,7 +45,6 @@ int main()
 			// check if current stack is occupied
 			if (stacks[j].size() > 0)
 			{	
-				cout << "OCCUPIED" << endl;
 				// check if container can fit on stack
 				if (stacks[j].top() >= container)	
 				{

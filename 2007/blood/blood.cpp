@@ -12,7 +12,11 @@
 
 int main(int argc, *char[] argv)
 {
-	char aboallele1, aboallele2;			
+	//char aboallele1, aboallele2;
+	
+	int numA, numB, numO;		// number of each allele
+	
+	string abocombination;	
 	string abobloodtype;
 	
 /*	
@@ -24,6 +28,9 @@ int main(int argc, *char[] argv)
 	O + O = O
 
 */
+
+	// count each allele
+	
 			
 	return 0;
 }
